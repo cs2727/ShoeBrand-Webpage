@@ -1,359 +1,313 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding-block: 7em;
-    padding-inline: 13em;
+  margin: 0;
+  padding-block: 1em;
+  padding-inline: 13em;
 }
-
-
-
 
 /* Background Image Styling */
 
 .hero-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url('https://assets.codepen.io/2621168/shoe.jpg');
-    background-size: cover;
-    background-position-x: 20%;
-    background-position-y: 20%;
-    width: 50%;
-    height: 80vh;
-    z-index: -1;
-    animation: introLoad 2s forwards;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('https://assets.codepen.io/2621168/shoe.jpg');
+  background-size: cover;
+  background-position-x: 45%;
+  background-position-y: 20%;
+  width: 50%;
+  height: 100vh;
+  z-index: -1;
+  animation: introLoad 2s forwards;
 }
-
-
-
-
 
 /* First Section Related Stylings ------------------------- 1 */
 
-#firstSection #burgerEmoji, #firstSection #closeButton {
-    display: none;
+#firstSection {
+  min-height: 100vh;
 }
 
-
-#firstSection {
-    margin-bottom: 32em;
+#firstSection #burgerEmoji,
+#firstSection #closeButton {
+  display: none;
 }
 
 #firstSection header {
-    display: flex;
+  display: flex;
 }
 
 #firstSection header #whiteLogo {
-    display: none;
+  display: none;
 }
 
 /* Nav Container Styling */
 #firstSection nav {
-    position: absolute;
-    right: 20%;
-    width: 600px;
-    max-width: 40%;
+  position: absolute;
+  right: 20%;
+  width: 600px;
 }
 
 /* Nav Un-ordered List Styling */
-#firstSection header nav ul{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: "Poppins", sans-serif;
-    width: 100%;
+#firstSection header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
 }
 
 /* Nav Anchor Tag Styling */
 #firstSection header nav ul a {
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 #firstSection header nav ul a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  filter: brightness(80%);
 }
 
 #firstSection #textContainer {
-    width: 50%;
+  width: 50%;
 }
 
 #firstSection #textContainer h1 {
-    font-size: 3.5rem;
-    margin-block: 2em;
+  font-size: 3.5rem;
+  margin-block: 2em;
 }
 
 #firstSection #textContainer p {
-    font-size: 2rem;
+  font-size: 2rem;
 }
-
-
-
 
 /* Second Section Related Stylings ---------------- */
 
-
 #secondSection {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 28vh);
-    column-gap: 10em;
-    margin-right: 10em;
-    position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3);
+  column-gap: 5px;
+  position: relative;
 }
 
 #secondSection img {
-    height: 100%;
-    width: 70%;
+  width: 70%;
 }
 
 #secondSection .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #secondSection .container h3 {
-    font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 #secondSection .container p {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 2200px width Media Query  ----------------------- */
 
+@media only screen and (max-width: 2216px) {
+  body {
+    padding-inline: 8em;
+  }
 
-@media only screen and (max-width: 2200px) {
+  #firstSection #textContainer h1 {
+    font-size: 2.6rem;
+  }
 
-    #firstSection nav {
-       right: 10%;
-    }
+  #firstSection #textContainer p {
+    font-size: 1.6rem;
+  }
 
-    #firstSection {
-        margin-bottom: 20em;
-    }
+  #firstSection nav {
+    right: 10%;
+  }
 
-    #secondSection {
-        margin: 0;
-        column-gap: 2em;
-    } 
+  #secondSection {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  body {
+    padding-inline: 4em;
+  }
+
+  #firstSection #textContainer h1 {
+    font-size: 2.3rem;
+  }
+
+  #firstSection #textContainer p {
+    font-size: 1.4rem;
+  }
 }
 
 /* 1305px width Media Query -------------- */
 
- @media only screen and (max-width: 1305px) {
-    body {
-        padding-inline: 4em;
-    }
+@media only screen and (max-width: 1350px) {
+  #redLogo {
+    display: none;
+  }
 
-       #redLogo {
-        display: none;
-       }
+  #firstSection header #whiteLogo {
+    display: block;
+  }
 
-        #firstSection header #whiteLogo {
-        display: block;
-        }
+  .hero-img {
+    width: 100%;
+  }
 
-      .hero-img {
-        height: 120vh;
-        width: 100%;
-      }
-      
-      #firstSection #textContainer {
-        width: 100%;
-        color: white;
-      }
+  #firstSection #textContainer {
+    width: 100%;
+    color: white;
+  }
 
-      #firstSection nav {
-        right: 12%;
-     }
+  #firstSection nav {
+    right: 12%;
+  }
 
-     #firstSection {
-        margin-bottom: 25em;
-     }
+  #secondSection {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+    row-gap: 0px;
+  }
 
-     #secondSection {
-        grid-template-columns: none;
-        grid-template-rows: repeat(6, 30vh);
-        row-gap: 2em;
-     }
+  #secondSection .container {
+    justify-content: space-evenly;
+  }
 
-     #secondSection .container #smallText{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        justify-content: space-evenly;
-     }
+  #secondSection .container #smallText {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-     #secondSection .container img {
-        width: 100%;
-     }
+  #secondSection .container img {
+    height: auto;
+    width: 100%;
+  }
 
-     #secondSection .container h3 {
-        font-size: 3em;
-     }
+  #secondSection .container h3 {
+    font-size: 3rem;
+    margin-block: 24px;
+  }
 
-     #secondSection .container p {
-        font-size: 2rem;
-     }
+  #secondSection .container p {
+    font-size: 2rem;
+  }
 
-   
-
-     #secondSection #image3Container {
-        grid-row-start: 4;
-        grid-row-end: 5;
-     }
- }
-
-
-
+  #secondSection #image3Container {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
 
 /* 950px Width Media Query -------------- */
 
- @media only screen and (max-width: 950px) {
-    .hero-img {
-        background-position-x: 50%;
-    }
+@media only screen and (max-width: 950px) {
+  .hero-img {
+    background-position-x: 50%;
+  }
 
-    #firstSection {
-        margin-bottom: 30em;
-    }
+  #firstSection header nav {
+    display: none;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 50%;
+    background-color: white;
+    z-index: 1;
+  }
 
-    #firstSection header nav {
-            display: none;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            max-width: 50%;
-            background-color: white;
-            z-index: 1;
-        }
+  #firstSection header nav ul {
+    flex-flow: column nowrap;
+    height: 50%;
+    margin-block: 2.2em;
+  }
 
-    #firstSection header nav ul {
-         flex-flow: column nowrap;
-         height: 50%;
-         margin-block: 2.2em;
-    }
+  #firstSection header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15%;
+  }
 
-    #firstSection header nav ul li {
-        display:flex;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 15%;
+  #firstSection header nav ul li:hover {
+    background-color: gray;
+    text-decoration: none;
+  }
 
-    }
+  #firstSection header nav ul a:hover {
+    text-decoration: none;
+  }
 
-    #firstSection header nav ul li:hover {
-        background-color: gray;
-        text-decoration: none;
-    }
+  #firstSection header nav ul a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+  }
 
-    #firstSection header nav ul a:hover {
-        text-decoration: none;
-    }
-    
+  #firstSection #burgerEmoji {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    height: 50px;
+    width: 40px;
+    cursor: pointer;
+  }
 
-    #firstSection header nav ul a {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: black;
-        }
+  #firstSection #burgerEmoji div {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 9px;
+  }
 
-
-    #firstSection #burgerEmoji {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        position: absolute;
-        top: 8%;
-        right: 5%;
-        height: 50px;
-        width: 40px;
-        cursor: pointer;
-    }
-
-    #firstSection #burgerEmoji div {
-        height: 5px;
-        width: 100%;
-        background-color: white;
-        border-radius: 9px;
-    }
-
-    #firstSection #closeButton {
-        display: block;
-        position: absolute;
-        top: 2%;
-        right: 6%;
-        z-index: 1;
-        cursor: pointer;
-        height: 29px
-    }
-
- }
-
- /* -------------- */
-
-@media only screen and (max-width: 600px){
-    body {
-        padding-inline: 1em;
-        padding-block: 3em;
-    }
-
-
-    #firstSection #burgerEmoji {
-        top: 3%;
-    }
-
-    #firstSection #textContainer h1 {
-        font-size: 3rem;
-    }
-
-    #secondSection #smallText p {
-        font-size: 1.5rem;
-    }
-
+  #firstSection #closeButton {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 6%;
+    z-index: 1;
+    cursor: pointer;
+    height: 29px;
+  }
 }
 
+/* -------------- */
 
+@media only screen and (max-width: 700px) {
+  body {
+    padding-inline: 1em;
+    padding-block: 3em;
+  }
 
+  #firstSection #burgerEmoji {
+    top: 3%;
+  }
 
+  #firstSection #textContainer h1 {
+    font-size: 2.2rem;
+  }
 
+  #secondSection #smallText p {
+    font-size: 1.5rem;
+  }
+}
